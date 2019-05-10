@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Let's experiment with an API!</title>
+</head>
+
+<h1>Language Analyzer</h1>
+
+<body>
+  <form action="" method="POST">
+    <div>
+        {{ form.hidden_tag() }}
+          <label><strong>What are we analyzing?</strong></label><br>
+          {{ form.input(
+              placeholder="Insert text here.",
+              class_="textbox"
+            )
+          }}
+    </div><br>
+    {{
+      form.submit()
+    }}
+
+  </form>
+</body>
+</html>
+
+<style>
+  .textbox{
+    width: 700px;
+    height: 200px;
+  }
+</style>
