@@ -23,12 +23,9 @@ class Form(FlaskForm):
 
 
 @app.route("/", methods = ['GET', 'POST'])
-def hello():
+def main():
     if(request.method == 'POST'):
         input = request.form
-        getSentiment(input['input'])
-        getEntities(input['input'])
-        getSyntax(input['input'])
     return render_template(
         'template.html',
         form = Form()
@@ -36,16 +33,19 @@ def hello():
 
 def getSyntax(input):
     #Detects parts of speech, punctuation, etc.
+    pass
 
 def getSentiment(input):
     #Uses google's pre-trained NLP algorithm to determine 'feeling' of text
     #Has a 'score' that corresponds to overall emotional leaning and 'magnitude'
     #that includes overall strength of emotion, both positive and negative.
+    pass
 
 def getEntities(input):
     #Classifies phrases in the text into entities, with different categories like
     #person, organization, location, etc. Also gives a measure of salience, or
     #the entities' importance for the text.
+    pass
 
 
 if __name__ == "__main__":
